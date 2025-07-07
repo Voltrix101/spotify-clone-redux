@@ -1,7 +1,16 @@
-# Build and Deploy a Better Spitfy 2.0 Clone Music App with React 18! (Tailwind, Shazam, Redux)
-![Spitfy Clone](https://i.ibb.co/mFh2kGZ/Thumbnail-2.png)
+# Opify - Modern Music App (React 18, Tailwind, Deezer API)
 
-### [🌟 Become a top 1% Next.js 13 developer in only one course](https://jsmastery.pro/next13)
-### [🚀 Land your dream programming job in 6 months](https://jsmastery.pro/masterclass)
+![Opify Logo](src/assets/logo.png)
 
-### Launch your development career with project-based coaching on [JS Mastery Pro](https://www.jsmastery.pro).
+Opify is a beautiful, glassmorphism-inspired music player app built with React 18, Tailwind CSS, and the Deezer API. Enjoy top charts, albums, playlists, and more—all with a stunning, modern UI.
+
+**Features:**
+- Deezer API integration (top tracks, albums, playlists)
+- Glassmorphism & vibrant design
+- Responsive layout
+- Modern sidebar navigation
+- Opify branding
+
+---
+
+> Built for learning, fun, and music discovery!
