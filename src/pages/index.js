@@ -15,3 +15,8 @@ export {
   TopCharts,
   AroundYou,
 };
+
+export { default as Playlists } from './Playlists';
+export { default as Albums } from './Albums';
+export { default as Genres } from './Genres';
+export { default as Profile } from './Profile';

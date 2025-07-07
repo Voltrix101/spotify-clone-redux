@@ -89,6 +89,8 @@ const MusicPlayer = () => {
         />
       </div>
       <VolumeBar value={volume} min="0" max="1" onChange={(event) => setVolume(event.target.value)} setVolume={setVolume} />
+      <div className="absolute h-28 bottom-0 left-0 right-0 flex animate-slideup bg-gradient-to-br from-white/20 to-[#2a2a80]/80 backdrop-blur-2xl rounded-t-3xl z-10 shadow-2xl border-t border-white/10">
+      </div>
     </div>
   );
 };

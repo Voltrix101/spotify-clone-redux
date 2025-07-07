@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  @apply bg-gradient-to-br from-[#1e215d] via-[#2a5298] to-[#0f2027] min-h-screen font-['Montserrat'] text-white transition-colors duration-500;
+  background: linear-gradient(135deg, #1e215d 0%, #2a5298 50%, #0f2027 100%);
+  box-shadow: 0 0 80px 10px #2a5298 inset;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

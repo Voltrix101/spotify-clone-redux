@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { HiOutlineHashtag, HiOutlineHome, HiOutlineMenu, HiOutlinePhotograph, HiOutlineUserGroup } from 'react-icons/hi';
 import { RiCloseLine } from 'react-icons/ri';
+import { FaHome, FaUserFriends, FaChartBar, FaMusic, FaListUl, FaUserCircle } from 'react-icons/fa';
 
 import { logo } from '../assets';
 
@@ -14,17 +15,14 @@ const links = [
 
 const NavLinks = ({ handleClick }) => (
   <div className="mt-10">
-    {links.map((item) => (
-      <NavLink
-        key={item.name}
-        to={item.to}
-        className="flex flex-row justify-start items-center my-8 text-sm font-medium text-gray-400 hover:text-cyan-400"
-        onClick={() => handleClick && handleClick()}
-      >
-        <item.icon className="w-6 h-6 mr-2" />
-        {item.name}
-      </NavLink>
-    ))}
+    <NavLink to="/" className={({ isActive }) => `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${isActive ? 'bg-blue-700 text-white' : 'hover:bg-blue-900 hover:text-white text-blue-300'}`}><FaHome /> Discover</NavLink>
+    <NavLink to="/around-you" className={({ isActive }) => `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${isActive ? 'bg-blue-700 text-white' : 'hover:bg-blue-900 hover:text-white text-blue-300'}`}><FaUserFriends /> Around You</NavLink>
+    <NavLink to="/top-artists" className={({ isActive }) => `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${isActive ? 'bg-blue-700 text-white' : 'hover:bg-blue-900 hover:text-white text-blue-300'}`}><FaUserCircle /> Top Artists</NavLink>
+    <NavLink to="/top-charts" className={({ isActive }) => `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${isActive ? 'bg-blue-700 text-white' : 'hover:bg-blue-900 hover:text-white text-blue-300'}`}><FaChartBar /> Top Charts</NavLink>
+    <NavLink to="/playlists" className={({ isActive }) => `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${isActive ? 'bg-blue-700 text-white' : 'hover:bg-blue-900 hover:text-white text-blue-300'}`}><FaListUl /> Playlists</NavLink>
+    <NavLink to="/albums" className={({ isActive }) => `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${isActive ? 'bg-blue-700 text-white' : 'hover:bg-blue-900 hover:text-white text-blue-300'}`}><FaMusic /> Albums</NavLink>
+    <NavLink to="/genres" className={({ isActive }) => `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${isActive ? 'bg-blue-700 text-white' : 'hover:bg-blue-900 hover:text-white text-blue-300'}`}><FaMusic /> Genres</NavLink>
+    <NavLink to="/profile" className={({ isActive }) => `flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${isActive ? 'bg-blue-700 text-white' : 'hover:bg-blue-900 hover:text-white text-blue-300'}`}><FaUserCircle /> Profile</NavLink>
   </div>
 );
 
@@ -33,7 +31,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="md:flex hidden flex-col w-[240px] py-10 px-4 bg-[#191624]">
+      <div className="h-full w-60 bg-white/10 backdrop-blur-xl shadow-2xl border-r border-white/10 flex flex-col p-6 transition-all duration-500">
         <img src={logo} alt="logo" className="w-full h-14 object-contain" />
         <NavLinks />
       </div>
